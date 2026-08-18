@@ -1,0 +1,98 @@
+
+Analysoi seuraavat uutiset Bonnier Business Forumin näkökulmasta.
+
+Bonnier Business Forum on kiinnostunut erityisesti:
+- kiinteistöalasta
+- rakentamisesta
+- kaupunkikehityksestä
+- investoinneista
+- datakeskuksista
+- logistiikasta
+- matkailuhankkeista
+- yritysten avainhenkilönimityksistä
+
+Luokittele jokainen uutinen yhteen seuraavista kategorioista:
+1. Nimitykset & organisaatiomuutokset
+2. Investoinnit & transaktiot
+3. Kaupunkikehitys & kiinteistökehitys
+4. Rakennus- & toimitilahankkeet
+5. Retail & kaupalliset kiinteistöt
+6. Hotellit & hospitality
+7. Logistiikka, infra & datakeskukset
+8. Hoiva- & yhteiskuntakiinteistöt
+9. Ei relevantti
+
+Palauta vastauksesi taulukkona sarakkeilla:
+id | ai_category | region_detected | confidence | summary | relevance | priority | suggested_action
+
+Uutiset:
+
+ID: 0
+Otsikko: Juuso Rönnholm on uusi Oulun kauppakamarin toimitusjohtaja - Kaleva
+Hakukategoria: Nimitykset & organisaatiomuutokset
+Alue hakuvaiheessa: Oulu
+Hakusana: aloittaa toimitusjohtajana
+URL: https://news.google.com/rss/articles/CBMiiAFBVV95cUxPbWJ6ZENoamNkWHpEZXFVQ1p4cXViTE9kVXUzdENrNkVqN1ZYdjBFYmo1aFBNaDV3bDlkZEVjVmM0VmdqTlM4RmJxQ251UkhxeUliT0ZUc2pMVFFTRGV1alptaUdQM1AxVV9PMTJsdDdwbm51MUJCaExRSU1WSGhBSzh0VXJVWUg3?oc=5
+
+ID: 1
+Otsikko: Pohjois-Pohjanmaa aloittaa valtavat yhteistoimintaneuvottelut – ”Olo on tyrmistynyt ja sanaton” - Tehy-lehti
+Hakukategoria: Nimitykset & organisaatiomuutokset
+Alue hakuvaiheessa: Pohjois-Pohjanmaa
+Hakusana: aloittaa johtajana
+URL: https://news.google.com/rss/articles/CBMiwgFBVV95cUxPeC1yQVFUMlVlVF9jNEdyRGpXUWpUQkhsNmItSUdVb0ZvMWxkSzhhVjFrdjlmRkJ5N3o3MnVJWExrU2E2aGdxRlNIaHM2VVE0Q1BwaThJbWhvY04tRno0aS03M3BRY3VZRFFadkJHbG5tSHc2SXhHdGFaZXk0dW1QNERMRDRDQUR0cXk5aUZ3dVNmYUNZZGsyYmZlc3ZhTkpkZkJzUG9jQk5kOUZmMTZFb0pSbWZmQTlTV0VMNXg0amlXZw?oc=5
+
+ID: 2
+Otsikko: Pohde: Massiiviset yt-neuvottelut - Iltalehti
+Hakukategoria: Nimitykset & organisaatiomuutokset
+Alue hakuvaiheessa: Pohjois-Pohjanmaa
+Hakusana: aloittaa johtajana
+URL: https://news.google.com/rss/articles/CBMiekFVX3lxTE1va1hmNTNZMjMxRF9kTXgwVFRrNGZubmNORnRENnJzbms3WHdkcUFfY2J4anlBaTBiODVxckMwSjYzWHp2WXNKQ01yNHJGWU51VE5HZDJOeUkxdGJTSjBZVC1XVkJGSEw4dnpRYjdpdjFjVXEtekl2ZDlB?oc=5
+
+ID: 3
+Otsikko: Keski-Pohjanmaan Kamariorkesterin tulevissa konserteissa encoretkin sisältävät yllätyksiä - Keskipohjanmaa
+Hakukategoria: Nimitykset & organisaatiomuutokset
+Alue hakuvaiheessa: Keski-Pohjanmaa
+Hakusana: aloittaa johtajana
+URL: https://news.google.com/rss/articles/CBMiyAFBVV95cUxNOFducV9hQjBQc2RpTmNmaENncWotazAydFc2X09RbW5Qb2NBdkZQcVc5b0VNNUtSVG5QdDk3R3lkWlF0eFVzc0pWVWxXWTlMVnlrd3ZXRy01QVlHZ0ZESjhMeGdtbDBUX3Vvb0V4YlhfNEg1ZGlwQ0JZeWhWYmd4YTBwZTFfUzFnemUyRzJyU3NKNUdaN1g4Z3hjUTllaVBLYU5TcGoxWDFhMVBTTWw1RVBkdTFzdmQxWFR6S0VsU1YwMS1QRnJiYg?oc=5
+
+ID: 4
+Otsikko: Kesko haluaa rakentaa kaksikerroksisen K-marketin Saaristokaupunkiin – aluejohtaja: ”Tarkoitus edetä nopeasti” - Yle
+Hakukategoria: Nimitykset & organisaatiomuutokset
+Alue hakuvaiheessa: Pohjois-Suomi
+Hakusana: uusi aluejohtaja
+URL: https://news.google.com/rss/articles/CBMiQkFVX3lxTE5KbXJQbkg5bUNJUUtBeFVXUk1vSTZRQVRJZ2dRdkpwT1o4MmJFeUtOSkQxbXM1NHlkcGlSUzl4Wl9jZw?oc=5
+
+ID: 5
+Otsikko: Pääkirjoitus: Kun muu on epävarmaa, sijoittaminen tuo nuorelle turvaa tulevaan - Kainuun Sanomat
+Hakukategoria: Investoinnit & transaktiot
+Alue hakuvaiheessa: Kainuu
+Hakusana: investointi
+URL: https://news.google.com/rss/articles/CBMitwFBVV95cUxPRHRwaHN3TTdhNmEwM3QwN3NlcFNib3pURThRc1hucmMxQ1RHZFd6bHdiRHVpRDBrcUJBMmRkOUhBOG83Y01fYTVocjlDYUp6RnNpNkpzUTZIUkZxbjJCZmJLMFkxOFo4VEVzNjg0SktFSlJaeGZod29TSkswQ21vMnMycGRsLWxYMnZZWVpRRFBaM290NGRLa1I3c05tQmJ6MXREMDNOcEdhVWFSeEhJU0N3RFZVSUE?oc=5
+
+ID: 6
+Otsikko: Vain yksi iso marja-alan yritys ilmoitti Finnwatchille siirtyvänsä Reilun kaupan marjoihin - Etelä-Suomen Sanomat
+Hakukategoria: Investoinnit & transaktiot
+Alue hakuvaiheessa: Lappi
+Hakusana: yrityskauppa
+URL: https://news.google.com/rss/articles/CBMiVkFVX3lxTE1GTlZrWjB4Tk8xV1pYdUIxZEJDWVBmVWYzWWNmbjI4SmFVcTY3Tk81SlVlY0dWaFJKMU5ObG5vbl95MHZCbFJVdzdvdjFxQmRxczJLZ1pB?oc=5
+
+ID: 7
+Otsikko: Kiramo Oy avasi toimiston Tyrnävälle – yritys palvelee kaikissa metsään liittyvissä asioissa - Rantalakeus
+Hakukategoria: Investoinnit & transaktiot
+Alue hakuvaiheessa: Pohjois-Pohjanmaa
+Hakusana: yrityskauppa
+URL: https://news.google.com/rss/articles/CBMijwFBVV95cUxPZTBQNDNEeGJ0QkhTUHpMVHRmZ2hZM2JZY3JIb0YzY1k2M2pxRU50R05odUZ2THp2cFE3Ti1xYWhudDBycW1PUGt4Q2VDRDNzckV6N2ZjTUxQMkJVczNyMkJZRDJpMG5Fc3dHNWVkazRsa2ptekMybEk2ak1rVUJZNmI2SFViT1lVQnVyZi1mUQ?oc=5
+
+ID: 8
+Otsikko: Maakuntamuseo valitti hallinto-oikeuteen Rovaniemen Kauppayhtiön kaavasta – "Suojelumerkintä tosiasiassa mahdollistaa merkittävien rakennusten purkamisen" - Lapin Kansa
+Hakukategoria: Kaupunkikehitys & kiinteistökehitys
+Alue hakuvaiheessa: Pohjois-Suomi
+Hakusana: asemakaava
+URL: https://news.google.com/rss/articles/CBMijgFBVV95cUxOaTdEM1Z1S3U2TTNVYVpITTMtQnZnS0hjMlVfbG92ZVNiSHp2Q2hyT01zRnE1MWFBUXRGckJvSGVqTC16N29ObnlPT0piN1ZhdWFnd1JDSGVLVDA4ZmlsSVNhQTV1X2hxaTNUaGdLN3R5XzdDQU5udWtJZFpPdnp6cmo3SjZyamQ0c05ubWhB?oc=5
+
+ID: 9
+Otsikko: Näkökulma: Nyt on vaikuttamisen paikka maankäyttöön Kainuussa - Kainuun Sanomat
+Hakukategoria: Kaupunkikehitys & kiinteistökehitys
+Alue hakuvaiheessa: Kainuu
+Hakusana: kaavoitus
+URL: https://news.google.com/rss/articles/CBMiogFBVV95cUxPaHQtaWkzbUlOTjBuejBQdXhlN09zcVV4ZTF5UUNjZTM0elRDZ19KZmJpTGlHN3NZUjlqZlVNZFVPRklxaTJWbzFaZkd5cmlRRVJrdWc5c2NmUnkxUDN2aE9iN0xfb20wOG8yY0MyOE1wRVBlQmJmVkwxSjNCXzdPakZmbF9RZnBNaUlPVllUeU11OC1ZOENtOXQ3aEVqQjVhelE?oc=5
