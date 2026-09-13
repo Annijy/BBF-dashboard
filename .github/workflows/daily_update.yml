@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: daily-bbf-update
-  cancel-in-progress: false  
+  cancel-in-progress: false
 
 jobs:
   update-data:
@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,10 +48,27 @@ jobs:
 
           git add data.csv data_scored.csv data_ai_analyzed.csv
 
-          if ! git diff --cached --quiet; then
-            git commit -m "Daily news update"
-            git pull --rebase origin main
-            git push origin main
-          else
+          if git diff --cached --quiet; then
             echo "No data changes to commit"
+            exit 0
           fi
+
+          git commit -m "Daily news update"
+
+          for attempt in 1 2 3; do
+            echo "Push attempt $attempt"
+
+            git fetch origin main
+            git rebase origin/main
+
+            if git push origin HEAD:main; then
+              echo "Push successful"
+              exit 0
+            fi
+
+            echo "Push failed, retrying..."
+            sleep 5
+          done
+
+          echo "Push failed after 3 attempts"
+          exit 1
