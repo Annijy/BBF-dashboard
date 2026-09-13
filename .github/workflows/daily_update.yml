@@ -30,10 +30,15 @@ jobs:
       - name: Score news
         run: python score_news.py
 
+      - name: Analyze top news with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python analyze_top_with_gemini.py
+
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.csv data_scored.csv
+          git add data.csv data_scored.csv data_ai_analyzed.csv
           git diff --cached --quiet || git commit -m "Daily news update"
           git push
