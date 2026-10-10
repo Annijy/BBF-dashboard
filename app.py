@@ -1,3 +1,4 @@
+
 import streamlit as st
 import pandas as pd
 
@@ -11,6 +12,32 @@ st.write("Pohjois-Suomen markkinasignaalien seuranta")
 
 # Ladataan pisteytetty uutisaineisto
 df = pd.read_csv("data_scored.csv")
+
+# Ladataan AI-analyysit ja yhdistetään ne uutisiin
+try:
+    ai_df = pd.read_csv("data_ai_analyzed.csv")
+
+    ai_columns = [
+        "url",
+        "summary",
+        "relevance_reason",
+        "relevant",
+        "north_finland",
+        "ai_category",
+        "confidence",
+        "detected_region"
+    ]
+
+    ai_df = ai_df[ai_columns].drop_duplicates(subset=["url"])
+
+    df = df.merge(
+        ai_df,
+        on="url",
+        how="left"
+    )
+
+except (FileNotFoundError, KeyError):
+    st.warning("AI-analyysitiedostoa ei löytynyt tai sen rakenne on muuttunut.")
 
 st.write("Uutisia yhteensä:", len(df))
 
@@ -59,18 +86,10 @@ st.dataframe(
         ]
     ],
     column_config={
-        "bbf_score": st.column_config.NumberColumn(
-            "BBF Score"
-        ),
-        "priority": st.column_config.TextColumn(
-            "Prioriteetti"
-        ),
-        "title": st.column_config.TextColumn(
-            "Uutinen"
-        ),
-        "keyword": st.column_config.TextColumn(
-            "Hakusana"
-        ),
+        "bbf_score": st.column_config.NumberColumn("BBF Score"),
+        "priority": st.column_config.TextColumn("Prioriteetti"),
+        "title": st.column_config.TextColumn("Uutinen"),
+        "keyword": st.column_config.TextColumn("Hakusana"),
         "matched_terms": st.column_config.TextColumn(
             "Pisteytykseen vaikuttaneet termit"
         ),
@@ -87,7 +106,6 @@ st.divider()
 
 st.subheader("Kaikki kategorian uutiset")
 
-# Kaikki valitun kategorian uutiset
 st.dataframe(
     filtered[
         [
@@ -100,21 +118,11 @@ st.dataframe(
         ]
     ],
     column_config={
-        "bbf_score": st.column_config.NumberColumn(
-            "BBF Score"
-        ),
-        "priority": st.column_config.TextColumn(
-            "Prioriteetti"
-        ),
-        "title": st.column_config.TextColumn(
-            "Uutinen"
-        ),
-        "keyword": st.column_config.TextColumn(
-            "Hakusana"
-        ),
-        "source": st.column_config.TextColumn(
-            "Lähde"
-        ),
+        "bbf_score": st.column_config.NumberColumn("BBF Score"),
+        "priority": st.column_config.TextColumn("Prioriteetti"),
+        "title": st.column_config.TextColumn("Uutinen"),
+        "keyword": st.column_config.TextColumn("Hakusana"),
+        "source": st.column_config.TextColumn("Lähde"),
         "url": st.column_config.LinkColumn(
             "Avaa uutinen",
             display_text="Avaa"
@@ -129,6 +137,7 @@ st.divider()
 st.subheader("Uutisten tarkemmat tiedot")
 
 for _, row in filtered.iterrows():
+
     st.subheader(row["title"])
 
     st.write(f"**BBF Score:** {row['bbf_score']}")
@@ -142,6 +151,50 @@ for _, row in filtered.iterrows():
             f"**Pisteytykseen vaikuttaneet termit:** "
             f"{row['matched_terms']}"
         )
+
+    # AI-analyysi
+    summary = row.get("summary")
+
+    if pd.notna(summary) and str(summary).strip():
+
+        st.markdown("### AI-yhteenveto")
+        st.write(summary)
+
+        reason = row.get("relevance_reason")
+
+        if pd.notna(reason):
+            st.write(f"**Miksi uutinen on merkittävä:** {reason}")
+
+        ai_category = row.get("ai_category")
+
+        if pd.notna(ai_category):
+            st.write(f"**AI:n ehdottama kategoria:** {ai_category}")
+
+        detected_region = row.get("detected_region")
+
+        if pd.notna(detected_region):
+            st.write(f"**Tunnistettu alue:** {detected_region}")
+
+        confidence = row.get("confidence")
+
+        if pd.notna(confidence):
+            st.write(f"**AI:n luottamustaso:** {confidence} %")
+
+        relevant = row.get("relevant")
+        north_finland = row.get("north_finland")
+
+        if pd.notna(relevant) and pd.notna(north_finland):
+            if (
+                str(relevant).lower() == "true"
+                and str(north_finland).lower() == "true"
+            ):
+                st.success(
+                    "AI:n arvion mukaan relevantti Pohjois-Suomen uutinen"
+                )
+            else:
+                st.warning(
+                    "AI:n arvion mukaan uutinen ei välttämättä ole relevantti"
+                )
 
     st.link_button(
         "Avaa alkuperäinen uutinen",
